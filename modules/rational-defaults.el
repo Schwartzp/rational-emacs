@@ -15,7 +15,7 @@
 (customize-set-variable 'global-auto-revert-non-file-buffers t)
 
 ;; Revert buffers when the underlying file has changed
-(global-auto-revert-mode 1)
+(global-auto-revert-mode nil)
 
 ;; Use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
