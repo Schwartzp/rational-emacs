@@ -41,7 +41,7 @@
     (expand-file-name ".config/rational-emacs" home-dir)))
   "The user's rational-emacs configuration path.")
 
-(defvar rational-prefer-guix-packages nil
+(defvar rational-prefer-guix-packages t
   "If t, expect packages to be installed via Guix by default.")
 
 ;; Load the early config file if it exists
