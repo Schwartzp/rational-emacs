@@ -18,7 +18,7 @@
 (add-hook 'prog-mode-hook 'ws-butler-mode)
 
 ;; parentheses
-(electric-pair-mode 1) ; auto-insert matching bracket
+;(electric-pair-mode nil) ; auto-insert matching bracket
 (show-paren-mode 1)    ; turn on paren match highlighting
 
 (provide 'rational-editing)
