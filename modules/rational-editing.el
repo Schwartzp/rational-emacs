@@ -11,11 +11,18 @@
 
 ;;; Code:
 
-(straight-use-package 'ws-butler)
+(straight-use-package 'evil-nerd-commenter)
 
-;; Set up ws-butler for trimming whitespace and line endings
-;(add-hook 'text-mode-hook 'ws-butler-mode)
-(add-hook 'prog-mode-hook 'ws-butler-mode)
+;; Set a global binding for better line commenting/uncommenting
+;;(define-key global-map [remap comment-dwim] #'evilnc-comment-or-uncomment-lines)
+
+;; whitespace
+(customize-set-variable 'whitespace-style
+                        '(face tabs empty trailing tab-mark indentation::space))
+(customize-set-variable 'whitespace-action '(cleanup auto-cleanup))
+(add-hook 'prog-mode-hook #'whitespace-mode)
+(add-hook 'text-mode-hook #'whitespace-mode)
+
 
 ;; parentheses
 ;(electric-pair-mode nil) ; auto-insert matching bracket
